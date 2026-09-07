@@ -1,0 +1,31 @@
+SimulationType                MonteCarlo
+NumberOfCycles                100000
+NumberOfInitializationCycles  100000
+PrintEvery                     5000
+RestartFile                   no
+
+Movies                         no
+WriteMoviesEvery               1000
+
+UseChargesFromCIFFile         yes
+ChargeMethod                  Ewald
+CutOff                        12.0
+Forcefield                    local
+EwaldPrecision                1e-6
+
+Framework 0
+FrameworkName                 INT1-sxrd
+UnitCells                     2 3 1
+HeliumVoidFraction             0.4661847
+ExternalTemperature            77
+ExternalPressure               48656.725
+
+Component 0 MoleculeName               N2
+            MoleculeDefinition               Local
+            MolFraction                      1.0
+            TranslationProbability           0.5
+            ReinsertionProbability           0.5
+            RotationProbability              0.5
+            SwapProbability                  1.0
+            CreateNumberOfMolecules           0
+

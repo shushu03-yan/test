@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "campaign": "int1_n2_77k_psat_pacmof_prod_100k_labelnorm",
+  "workflow": "single",
+  "paths": {
+    "structures": "inputs/structures/single",
+    "forcefield": "inputs/share/forcefield",
+    "molecules": "inputs/share/molecules"
+  },
+  "adsorbates": ["N2"],
+  "simulation": {
+    "temperatures": [77],
+    "pressures": [9731.345, 19462.69, 29194.035, 38925.38, 48656.725, 58388.07, 68119.415, 77850.76, 87582.105, 97313.45],
+    "initialization_cycles": 100000,
+    "production_cycles": 100000,
+    "print_every": 5000,
+    "cutoff": 12.0,
+    "supercell_min_length": 24.0,
+    "ewald_precision": "1e-6"
+  },
+  "outputs": {"movies": false, "vtk": false},
+  "flexible": {"enabled": false},
+  "supercells": {},
+  "helium_void_fractions": {"INT1-sxrd": 0.4661847},
+  "resources": {
+    "partition": "cpu6348", "qos": "52cores", "cpus_per_task": 1,
+    "memory": "1G", "time": "3-00:00:00", "max_concurrent": 10
+  }
+}
+

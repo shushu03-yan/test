@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "campaign": "hof8_mix_demo",
+  "workflow": "mix",
+  "paths": {
+    "structures": "inputs/structures/mix",
+    "forcefield": "inputs/share/forcefield",
+    "molecules": "inputs/share/molecules"
+  },
+  "mixtures": [
+    {"name": "xe20_kr80", "components": ["xenon", "krypton"], "fractions": [0.2, 0.8]}
+  ],
+  "simulation": {
+    "temperatures": [298],
+    "pressures": [100000, 200000, 300000, 400000, 500000],
+    "initialization_cycles": 2000,
+    "production_cycles": 2000,
+    "print_every": 1000,
+    "cutoff": 12.0,
+    "supercell_min_length": 24.0,
+    "ewald_precision": "1e-6"
+  },
+  "outputs": {"movies": false, "vtk": false},
+  "flexible": {"enabled": false},
+  "supercells": {},
+  "helium_void_fractions": {},
+  "resources": {
+    "partition": "cpu6348", "qos": "104cores", "cpus_per_task": 1,
+    "memory": "2G", "time": "24:00:00", "max_concurrent": 5
+  }
+}
+

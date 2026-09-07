@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "campaign": "hof8_site_search_demo",
+  "workflow": "minimization",
+  "paths": {
+    "structures": "inputs/structures/minimization",
+    "forcefield": "inputs/share/forcefield",
+    "molecules": "inputs/share/molecules"
+  },
+  "adsorbates": ["xenon", "krypton"],
+  "simulation": {
+    "temperatures": [298],
+    "initialization_cycles": 2000,
+    "production_cycles": 2000,
+    "print_every": 1,
+    "cutoff": 12.0,
+    "supercell_min_length": 24.0,
+    "ewald_precision": "1e-10"
+  },
+  "minimization": {
+    "maximum_steps": 1000,
+    "rms_gradient_tolerance": "1e-6",
+    "max_gradient_tolerance": "1e-6"
+  },
+  "outputs": {"movies": true, "movies_every": 1, "vtk": false},
+  "flexible": {"enabled": false},
+  "supercells": {},
+  "helium_void_fractions": {},
+  "resources": {
+    "partition": "cpu6348", "qos": "104cores", "cpus_per_task": 1,
+    "memory": "2G", "time": "24:00:00", "max_concurrent": 5
+  }
+}
+
